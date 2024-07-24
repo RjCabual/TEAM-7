@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanny Motor Works</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f9;
+            overflow: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2A8F9E;
+            padding: 5px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .navbar img {
+            height: 100px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            gap: 40px; /* Increased gap between navigation links */
+            margin-right: 5%;
+        }
+
+        .navbar li {
+            position: relative; /* Make li positioned for absolute positioning of dropdown */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            display: block;
+        }
+        
+        .navbar a:hover {
+            color: #003D80; /* Change text color on hover */
+            background-color: white; /* Change background color on hover */
+            border-radius: 5px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px; /* Reduced padding */
+            min-height: calc(100vh - 110px); /* Adjusted height to match logo and padding */
+            background: linear-gradient(135deg, #2A8F9E 30%, #3C4B99 100%);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 50%;
+            margin-right: 20px;
+            margin-top: 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background-color: #003D80;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+
+        .hero button:hover {
+            background-color: #54d1f0;
+            border-radius: 10px;
+        }
+
+        .hero img {
+            width: 50%;
+            height: 50%;
+            animation: spin 10s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <img src="logo.png" alt="Sanny Motor Works Logo">
+        <ul>
+            <li><a href="addtocart.html">Motorcycle Parts</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Sign - in</a></li>
+        </ul>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Experience Professionalism And Elegance</h1>
+            <p>Explore our wide range of quality motorcycle parts and more to enhance your riding experience.</p>
+            <a href="addtocart.html"><button>EXPLORE</button></a>
+        </div>
+        <img src="logo.png" alt="Sanny Motor Works Logo">
+    </section>
+</body>
+</html>
