@@ -95,13 +95,13 @@
 
         .sidebar {
             flex: 1;
-            background: none;
+            background: #2c3e50; /* Darker background for better readability */
             padding: 15px;
             border-radius: 8px;
             margin-left: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center items horizontally */
+            align-items: flex-start; /* Align items to the start */
         }
 
         .sidebar h2 {
@@ -136,6 +136,7 @@
             width: 30px; /* Adjusted size for icons */
             height: 30px;
         }
+
         .sidebar .location-link {
             display: inline-block;
             color: #66FCF1;
@@ -150,6 +151,7 @@
             background-color: #54d1f0;
             color: #003D80;
         }
+
         .background {
             position: fixed;
             top: 0;
@@ -178,7 +180,7 @@
 <body>
     <div class="background"></div>
     <nav>
-        <a href="shop.html" class="logo-link">
+        <a href="index.html" class="logo-link">
             <img src="logo.png" alt="Sanny Motor Works Logo">
         </a>
         <div class="nav-title">About</div> <!-- Added About title -->
@@ -208,9 +210,20 @@
             <p><strong>Email:</strong> sammuel123@gmail.com</p>
             <p><strong>Phone:</strong> 09123456789</p>
             
-            <p><strong>Location:</strong><a href="https://www.google.com/maps?q=Zone+V+Muzon+West,+San+Jose+del+Monte+Bulacan" target="_blank" class="location-link">View on Google Maps</a>
+            <h2>Business Manager</h2>
+            <p><strong>Name:</strong> Sammuel Cabison</p>
+            <p><strong>Phone:</strong> 09771429336</p>
 
+            <h2>Mechanics</h2>
+            <p><strong>Christopher Jorge De Vera</strong></p>
+            <p>09663415541</p>
+            <p><strong>John Carlo De Vera</strong></p>
+            <p>09565224724</p>
+            <p><strong>Mark Gumafelix</strong></p>
+            <p>09052196869</p>
             
+            <p><strong>Location:</strong> <a href="https://www.google.com/maps?q=Zone+V+Muzon+West,+San+Jose+del+Monte+Bulacan" target="_blank" class="location-link">View on Google Maps</a></p>
+
             <!-- Updated contact information with icons -->
             <div class="contact-info">
                 <a href="https://www.facebook.com/SannyMotorWorks" target="_blank">

@@ -11,17 +11,47 @@
             padding: 0;
         }
 
-        body, html {
+        html, body {
+            height: 100%;
             font-family: 'Times New Roman', Times, serif;
-            background-color: #f4f4f9;
+        }
+
+        body {
             overflow: hidden;
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .background-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #2A8F9E;
+            background-color: rgba(48, 56, 59, 0.438);
             padding: 5px 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 10;
@@ -62,7 +92,6 @@
             justify-content: space-between;
             padding: 20px; /* Reduced padding */
             min-height: calc(100vh - 110px); /* Adjusted height to match logo and padding */
-            background: linear-gradient(135deg, #2A8F9E 30%, #3C4B99 100%);
             color: white;
         }
 
@@ -100,34 +129,30 @@
         }
 
         .hero img {
-            width: 50%;
-            height: 50%;
-            animation: spin 10s linear infinite reverse;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(-360deg); }
+            width: 70%;
+            height: 70%;
         }
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <img src="logo.png" alt="Sanny Motor Works Logo">
-        <ul>
-            <li><a href="addtocart.html">Motorcycle Parts</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Sign - in</a></li>
-        </ul>
-    </header>
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Experience Professionalism And Elegance</h1>
-            <p>Explore our wide range of quality motorcycle parts and more to enhance your riding experience.</p>
-            <a href="addtocart.html"><button>EXPLORE</button></a>
-        </div>
-        <img src="logo.png" alt="Sanny Motor Works Logo">
-    </section>
+    <div class="background-container"></div>
+    <div class="content">
+        <header class="navbar">
+            <img src="logo.png" alt="Sanny Motor Works Logo">
+            <ul>
+                <li><a href="addtocart.html">Motorcycle Parts</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </header>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Experience Professionalism And Elegance</h1>
+                <p>Explore our wide range of quality motorcycle parts and more to enhance your riding experience.</p>
+                <a href="addtocart.html"><button>EXPLORE</button></a>
+            </div>
+            <img src="logo.png" alt="Sanny Motor Works Logo">
+        </section>
+    </div>
 </body>
 </html>
